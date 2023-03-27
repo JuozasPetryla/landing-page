@@ -1,0 +1,92 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* 
+FONT COLORS
+#343a40
+#212529
+
+PAGE COLORS
+#a4161a
+#ba181b
+#ead6d6
+
+
+*/
+
+/* HEADER */
+/*------- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ba181b;
+
+  /* width: 9.6rem; */
+  padding: 0 4.8rem;
+}
+
+.image-logo {
+  height: 9.8rem;
+}
+
+.nav-links {
+  color: #343a40;
+  display: flex;
+  align-items: center;
+  background-color: #ba181b;
+  list-style: none;
+  font-size: 2.4rem;
+  gap: 3.6rem;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #212529;
+  cursor: pointer;
+}
+
+/* HERO */
+/*------- */
+
+.hero {
+  margin: 0 auto;
+  align-items: center;
+  max-width: 130rem;
+  gap: 8rem;
+}
+
+.rectangle {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: center;
+  background-color: #a4161a;
+  width: 75rem;
+  height: 50rem;
+  clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+}
+
+.hero-text {
+  line-height: 1.1;
+  padding: 2.4rem 6.4rem;
+  font-size: 10.2rem;
+}
+
+.hero-img-box img {
+  width: 100%;
+  position: relative;
+}
+
+.hero-img-box .hero-img {
+  position: absolute;
+  top: 9.8rem;
+  right: 0;
+  font-weight: bold;
+  text-align: right;
+  font-size: 30px;
+}
