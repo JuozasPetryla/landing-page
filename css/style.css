@@ -110,3 +110,52 @@ PAGE COLORS
   width: 60rem;
   transition: 0.3s;
 }
+
+/* ABOUT */
+/* ------ */
+
+.section-about {
+  padding: 6.4rem 4.8rem;
+  height: 100vh;
+  background-color: #ead6d6;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  gap: 4.8rem;
+}
+
+.about-title {
+  line-height: 1.1;
+  font-size: 7.4rem;
+  font-weight: 600;
+}
+
+.about-list {
+  list-style: none;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+}
+
+.about-list-items {
+  display: grid;
+  grid-template-rows: 1fr 2fr 3fr;
+  align-items: start;
+}
+
+.about-list-items h4 {
+  align-self: top;
+  line-height: 1.2;
+  font-size: 4.8rem;
+}
+
+.about-list-items p {
+  padding: 0 4.8rem 2.4rem 0;
+  font-size: 2.4rem;
+  line-height: 1.3;
+}
+
+.about-icon {
+  height: 4.8rem;
+  width: auto;
+}
