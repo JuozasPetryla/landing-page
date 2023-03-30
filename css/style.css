@@ -43,50 +43,70 @@ PAGE COLORS
   list-style: none;
   font-size: 2.4rem;
   gap: 3.6rem;
+  transition: 0.3s;
 }
 
 .nav-link:hover,
 .nav-link:active {
   color: #212529;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 /* HERO */
 /*------- */
 
-.hero {
-  margin: 0 auto;
-  align-items: center;
-  max-width: 130rem;
-  gap: 8rem;
+.section-hero {
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(39, 39, 39, 0.6),
+      rgba(40, 40, 40, 0.6)
+    ),
+    url(../Lifter.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.rectangle {
-  margin-top: 4.8rem;
+.hero-text-container {
   display: flex;
   justify-content: center;
   background-color: #a4161a;
-  width: 75rem;
-  height: 50rem;
+  max-width: 90rem;
+  max-height: 70rem;
   clip-path: polygon(0 0, 100% 0, 65% 100%, 0% 100%);
+  position: absolute;
+  transform: translate(0%, 25%);
 }
 
 .hero-text {
   line-height: 1.1;
-  padding: 2.4rem 6.4rem;
-  font-size: 10.2rem;
+  padding: 2.4rem 4.8rem;
+  font-size: 8.6rem;
 }
 
-.hero-img-box img {
-  width: 100%;
-  position: relative;
+.cta-button {
+  border: none;
+  width: 55rem;
+  max-height: 10rem;
+  grid-column: 2;
+  background-color: #a4161a;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 135%);
+  justify-self: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  padding: 0 0 0 8rem;
+  transform: translate(0, 500%);
+  transition: 0.3s;
 }
 
-.hero-img-box .hero-img {
-  position: absolute;
-  top: 9.8rem;
-  right: 0;
-  font-weight: bold;
-  text-align: right;
-  font-size: 30px;
+.cta-button:hover,
+.cta-button:active {
+  cursor: pointer;
+  background-color: #ba181b;
+  width: 60rem;
+  transition: 0.3s;
 }
