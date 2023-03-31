@@ -16,6 +16,7 @@ PAGE COLORS
 #a4161a
 #ba181b
 #ead6d6
+#ead6d6
 
 
 */
@@ -69,7 +70,7 @@ PAGE COLORS
       rgba(39, 39, 39, 0.6),
       rgba(40, 40, 40, 0.6)
     ),
-    url(../Lifter.jpg);
+    url(../images/Lifter.jpg);
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,39 +170,53 @@ PAGE COLORS
 
 /* TESTIMONIALS */
 
-.section-gallery {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+.section-testimonials {
+  padding: 6.4rem 4.8rem;
   height: 100vh;
+  background-color: #cc8f8f;
+}
+
+.testimonials-title {
+  font-size: 7.4rem;
+  line-height: 1.1;
 }
 
 .testimonials-container {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  align-items: center;
+  max-width: 100rem;
+  height: 40rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .testimonial-container {
+  position: absolute;
   margin-top: 4.8rem;
-  display: grid;
-  max-width: 120rem;
-  height: 45rem;
+  top: 0;
+  width: 95%;
+  left: 2.5%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #a4161a;
-  padding: 4.8rem;
-  gap: 2rem;
-  justify-items: center;
-  clip-path: polygon(5% 10%, 100% 0%, 92% 100%, 0% 90%);
+  justify-self: center;
+  clip-path: polygon(10% 0%, 97% 0%, 90% 100%, 3% 100%);
+  transition: transform 1s;
 }
 
 .testimonial-container p {
   line-height: 1.1;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
+  width: 80%;
+  padding-top: 6.4rem;
 }
 
 .testimonial-image {
-  height: 9.6rem;
-  width: auto;
-  border-radius: 50px;
+  position: absolute;
+  top: 10%;
+  border-radius: 100px;
+  height: 8.6rem;
 }
 
 .arrow {
@@ -210,21 +225,28 @@ PAGE COLORS
   fill: #212529;
 }
 
-.left-arrow {
-  justify-self: end;
-}
-
 .arrow:hover,
 .arrow:active {
   cursor: pointer;
 }
 
+.left-arrow {
+  position: absolute;
+  top: 50%;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
 .dots {
   display: flex;
-  grid-column: 2/3;
-  justify-self: center;
-  align-self: start;
   gap: 2.4rem;
+  position: absolute;
+  top: 95%;
+  right: 47.5%;
 }
 
 .dot {
