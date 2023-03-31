@@ -38,3 +38,8 @@ p {
   font-weight: 600;
   color: #212529;
 }
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
