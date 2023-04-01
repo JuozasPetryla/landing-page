@@ -60,8 +60,7 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.querySelector(".dots").addEventListener("click", function (e) {
-  if (e.target === document.querySelector(`.dot-${curSlide + 1}`)) {
-    goToSlide(curSlide);
-  }
-  console.log(e.target);
+  curSlide = e.target.classList.value.slice(-1) - 1;
+  goToSlide(curSlide);
+  activateDot();
 });
