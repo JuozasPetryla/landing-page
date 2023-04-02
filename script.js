@@ -15,10 +15,11 @@ const goToSlide = function (slide) {
   );
 };
 
-const activateDot = function () {
+const activateDot = function (slide) {
+  curSlide = slide;
   dots.forEach((dot) => {
     dot.classList.remove("active-dot");
-    document.querySelector(`.dot-${curSlide + 1}`).classList.add("active-dot");
+    document.querySelector(`.dot-${slide + 1}`).classList.add("active-dot");
   });
 };
 
@@ -37,12 +38,12 @@ const prevSlide = function () {
   }
   curSlide--;
   goToSlide(curSlide);
-  activateDot();
+  activateDot(curSlide);
 };
 
 const init = function () {
   goToSlide(0);
-  activateDot(1);
+  activateDot(0);
 };
 
 init();
@@ -60,7 +61,8 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.querySelector(".dots").addEventListener("click", function (e) {
+  if (e.target.classList.contains("dots")) return;
   curSlide = e.target.classList.value.slice(-1) - 1;
+  activateDot(curSlide);
   goToSlide(curSlide);
-  activateDot();
 });
