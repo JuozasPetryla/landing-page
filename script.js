@@ -1,13 +1,25 @@
 "use strict";
 
+// Selectors
+
 const arrowLeft = document.querySelector(".left-arrow");
 const arrowRight = document.querySelector(".right-arrow");
 const testimonial = document.querySelectorAll(".testimonial-container");
 const dots = document.querySelectorAll(".dot");
+const imageContainer = document.querySelectorAll(".image-container");
+const imageGallery = document.querySelectorAll(".image-gallery");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const modalImages = document.querySelector(".images");
+const closeButton = document.querySelector(".close-modal");
+
+// Global variables
 
 let curSlide = 0;
 const maxSlide = testimonial.length;
 
+// TESTIMONIAL CAROUSEL
+// Functions
 const goToSlide = function (slide) {
   testimonial.forEach(
     (testimonial, i) =>
@@ -46,7 +58,11 @@ const init = function () {
   activateDot(0);
 };
 
+// Initializing carousel
+
 init();
+
+// Event listeners
 
 arrowLeft.addEventListener("click", prevSlide);
 arrowRight.addEventListener("click", nextSlide);
@@ -65,4 +81,37 @@ document.querySelector(".dots").addEventListener("click", function (e) {
   curSlide = e.target.classList.value.slice(-1) - 1;
   activateDot(curSlide);
   goToSlide(curSlide);
+});
+
+// GALLERY OVERLAY
+
+// Functions
+
+const closeModal = function () {
+  modalImages.innerHTML = "";
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+// Listeners
+imageContainer.forEach((image) => {
+  image.addEventListener("click", function (e) {
+    let img = e.target.classList.value.slice(-1);
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    let markup = `
+    <div class="image-container"><img class="image-gallery disable-hover" src="images/gallery-${img}.jpg" ></div>
+    
+    `;
+    modalImages.insertAdjacentHTML("beforeend", markup);
+  });
+});
+
+closeButton.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if ((e.keydown = "Escape")) {
+    closeModal();
+  }
 });

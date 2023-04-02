@@ -41,5 +41,8 @@ p {
 
 .hidden {
   display: none;
-  opacity: 0;
+}
+
+.disable-hover {
+  pointer-events: none !important;
 }
