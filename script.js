@@ -12,6 +12,8 @@ const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const modalImages = document.querySelector(".images");
 const closeButton = document.querySelector(".close-modal");
+const modalArrowRight = document.querySelector(".modal-right-arrow");
+const modalArrowLeft = document.querySelector(".modal-left-arrow");
 
 // Global variables
 
@@ -87,13 +89,44 @@ document.querySelector(".dots").addEventListener("click", function (e) {
 
 // Functions
 
+let currentImage = 1;
+const maxImage = imageContainer.length;
 const closeModal = function () {
   modalImages.innerHTML = "";
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
 
+const goToImage = function (img) {
+  currentImage = img;
+  modalImages.innerHTML = "";
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+  let markup = `
+  <div class="image-container"><img class="image-gallery disable-hover" src="images/gallery-${img}.jpg" ></div>
+    
+  `;
+  modalImages.insertAdjacentHTML("beforeend", markup);
+};
+
+const nextImage = function () {
+  if (currentImage === maxImage) {
+    currentImage = 0;
+  }
+  currentImage++;
+  goToImage(currentImage);
+};
+
+const prevImage = function () {
+  if (currentImage === 1) {
+    currentImage = maxImage + 1;
+  }
+  currentImage--;
+  goToImage(currentImage);
+};
+
 // Listeners
+// Rendering image modal
 imageContainer.forEach((image) => {
   image.addEventListener("click", function (e) {
     let img = e.target.classList.value.slice(-1);
@@ -104,9 +137,11 @@ imageContainer.forEach((image) => {
     
     `;
     modalImages.insertAdjacentHTML("beforeend", markup);
+    currentImage = +img;
   });
 });
 
+// Closing image modal
 closeButton.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
@@ -115,3 +150,8 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+// To next image
+
+modalArrowRight.addEventListener("click", nextImage);
+modalArrowLeft.addEventListener("click", prevImage);
