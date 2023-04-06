@@ -18,6 +18,9 @@ PAGE COLORS
 #ead6d6
 
 
+line-heights: 1, 1.1
+
+
 
 */
 
@@ -123,7 +126,7 @@ PAGE COLORS
 
 .section-about {
   padding: 6.4rem 4.8rem;
-  height: 100vh;
+  max-width: 180rem;
   background-color: #ba181b;
   display: grid;
   grid-template-rows: 1fr 4fr;
@@ -172,7 +175,6 @@ PAGE COLORS
 
 .section-testimonials {
   padding: 6.4rem 4.8rem;
-  height: 100vh;
   background-color: #ead6d6;
 }
 
@@ -271,7 +273,6 @@ PAGE COLORS
 .section-gallery {
   display: grid;
   background-color: #ba181b;
-  height: 100vh;
   padding: 6.4rem 4.8rem;
   position: relative;
 }
@@ -379,7 +380,6 @@ PAGE COLORS
 
 .section-plans {
   padding: 6.4rem 4.8rem;
-  height: 100vh;
   background-color: #ead6d6;
 }
 
@@ -405,11 +405,12 @@ PAGE COLORS
   background-color: #ba181b;
   justify-content: center;
   align-items: center;
-  padding: 2.4rem 2.4rem 2.4rem 3.2rem;
+  padding: 2.4rem 2.4rem 2.4rem 2.4rem;
   border-radius: 5px;
   max-width: 35rem;
   box-shadow: 1.5px 1px 5px 2px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
+  position: relative;
 }
 
 .plan:hover,
@@ -427,7 +428,10 @@ PAGE COLORS
 }
 
 .plan-perk {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
+  gap: 0.8rem;
 }
 
 .plan-title {
@@ -442,4 +446,64 @@ PAGE COLORS
 
 .plan-price-month {
   font-size: 2.4rem;
+}
+
+.check-icon {
+  height: 2rem;
+}
+
+.cross-icon {
+  height: 2rem;
+}
+
+/* FAQs */
+/* ---- */
+
+.section-FAQ {
+  display: grid;
+  background-color: #ba181b;
+  padding: 6.4rem 4.8rem;
+}
+
+.FAQ-title {
+  font-size: 7.4rem;
+  line-height: 1.1;
+}
+
+.FAQS-container {
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1.2rem;
+  margin-top: 4.8rem;
+  padding: 0 0 0 4.8rem;
+  max-width: 130rem;
+}
+
+.FAQ {
+  display: grid;
+  font-size: 4.8rem;
+  background-color: #ead6d6;
+  padding: 2.4rem;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.FAQ:hover,
+.FAQ:active {
+  cursor: pointer;
+}
+
+.chevron-icon {
+  height: 6.4rem;
+  grid-column: 2;
+  justify-self: end;
+}
+
+.FAQ-content {
+  grid-column: 1 / span 2;
+  font-size: 3.2rem;
+  padding-top: 2.4rem;
+  border-top: #495057 solid 2px;
 }
