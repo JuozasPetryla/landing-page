@@ -14,7 +14,9 @@ const modalImages = document.querySelector(".images");
 const closeButton = document.querySelector(".close-modal");
 const modalArrowRight = document.querySelector(".modal-right-arrow");
 const modalArrowLeft = document.querySelector(".modal-left-arrow");
-
+const FAQContainer = document.querySelectorAll(".FAQ");
+const FAQContent = document.querySelectorAll(".FAQ-content");
+const chevronIcon = document.querySelectorAll(".chevron-icon");
 // Global variables
 
 let curSlide = 0;
@@ -155,3 +157,20 @@ document.addEventListener("keydown", function (e) {
 
 modalArrowRight.addEventListener("click", nextImage);
 modalArrowLeft.addEventListener("click", prevImage);
+
+// FAQ section
+
+// Functions
+
+const openCloseFAQ = function (faq, chevron) {
+  faq.classList.toggle("hidden-accordion");
+  chevron.classList.toggle("rotate");
+};
+
+// Evenet listeners
+
+FAQContainer.forEach((faq) =>
+  faq.addEventListener("click", () => {
+    openCloseFAQ(faq.lastElementChild, faq.firstElementChild);
+  })
+);

@@ -43,6 +43,16 @@ p {
   display: none;
 }
 
+.hidden-accordion {
+  opacity: 1;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
 .disable-hover {
   pointer-events: none !important;
 }

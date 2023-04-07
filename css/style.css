@@ -473,11 +473,11 @@ line-heights: 1, 1.1
 .FAQS-container {
   list-style: none;
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
   gap: 1.2rem;
   margin-top: 4.8rem;
   padding: 0 0 0 4.8rem;
   max-width: 130rem;
+  transition: all 0.5s;
 }
 
 .FAQ {
@@ -490,6 +490,10 @@ line-heights: 1, 1.1
   align-items: center;
 }
 
+.FAQ-head {
+  border-radius: 3px;
+}
+
 .FAQ:hover,
 .FAQ:active {
   cursor: pointer;
@@ -499,11 +503,22 @@ line-heights: 1, 1.1
   height: 6.4rem;
   grid-column: 2;
   justify-self: end;
+  transition: 0.7s;
 }
 
 .FAQ-content {
+  margin-top: 2rem;
   grid-column: 1 / span 2;
   font-size: 3.2rem;
   padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
   border-top: #495057 solid 2px;
+  transition: all 0.3s;
+}
+
+.FAQ-content-container {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.3s linear, max-height 0.7s ease-out;
 }
