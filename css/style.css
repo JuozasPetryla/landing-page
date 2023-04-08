@@ -514,11 +514,13 @@ line-heights: 1, 1.1
   font-weight: 400;
   margin-top: 2rem;
   grid-column: 1 / span 2;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   padding-top: 2.4rem;
   padding-bottom: 2.4rem;
   border-top: #495057 solid 2px;
   transition: all 0.3s;
+  line-height: 1.3;
+  letter-spacing: 1.1px;
 }
 
 .FAQ-content-container {
