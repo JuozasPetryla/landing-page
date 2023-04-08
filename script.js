@@ -2,6 +2,7 @@
 
 // Selectors
 
+const header = document.querySelector(".header");
 const navLink = document.querySelectorAll(".nav-link");
 const ctaButton = document.querySelector(".cta-button");
 const arrowLeft = document.querySelector(".left-arrow");
@@ -185,7 +186,10 @@ FAQContainer.forEach((faq) =>
 // Functions
 
 const scrollInto = function (section) {
-  section.scrollIntoView({ behavior: "smooth", block: "start" });
+  window.scrollTo({
+    top: section.getBoundingClientRect().top + window.scrollY - 101,
+    behavior: "smooth",
+  });
 };
 
 navLink.forEach((nav) =>
@@ -201,3 +205,17 @@ ctaButton.addEventListener("click", () => {
 });
 
 // STICKY NAV
+console.log(window.scrollY);
+
+const addSticky = function () {
+  if (window.scrollY >= 634) {
+    header.classList.add("sticky");
+    document.querySelector(".section-hero").classList.add("nav-bar-offset");
+  }
+  if (window.scrollY < 100) {
+    header.classList.remove("sticky");
+    document.querySelector(".section-hero").classList.remove("nav-bar-offset");
+  }
+};
+
+window.addEventListener("scroll", addSticky);

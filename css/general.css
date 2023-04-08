@@ -73,3 +73,14 @@ p {
 .email:active {
   cursor: pointer;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-bar-offset {
+  margin-top: 101.2px;
+}
