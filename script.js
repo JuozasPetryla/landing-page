@@ -17,6 +17,8 @@ const modalArrowLeft = document.querySelector(".modal-left-arrow");
 const FAQContainer = document.querySelectorAll(".FAQ");
 const FAQContent = document.querySelectorAll(".FAQ-content");
 const chevronIcon = document.querySelectorAll(".chevron-icon");
+const form = document.querySelector(".form");
+
 // Global variables
 
 let curSlide = 0;
@@ -174,3 +176,11 @@ FAQContainer.forEach((faq) =>
     openCloseFAQ(faq.lastElementChild, faq.firstElementChild);
   })
 );
+
+// FORM section
+
+// Event listeners
+
+form.addEventListener("click", function (e) {
+  form.value = "";
+});

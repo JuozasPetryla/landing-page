@@ -11,6 +11,8 @@ FONT COLORS
 #343a40
 #212529
 #495057
+#272c30;
+
 
 PAGE COLORS
 #a4161a
@@ -19,7 +21,6 @@ PAGE COLORS
 
 
 line-heights: 1, 1.1
-
 
 
 */
@@ -48,12 +49,12 @@ line-heights: 1, 1.1
   list-style: none;
   font-size: 2.4rem;
   gap: 3.6rem;
-  transition: 0.3s;
 }
 
 .nav-link {
   color: #343a40;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .nav-link:hover,
@@ -535,11 +536,12 @@ line-heights: 1, 1.1
   background-color: #ead6d6;
 }
 
-.form-container {
+.form-container-all {
   display: grid;
   background-color: #b9181b;
-  padding: 6.4rem 4.8rem;
+  padding: 4.8rem 3.2rem;
   border-radius: 5px;
+  gap: 2.4rem;
 }
 
 .form-title {
@@ -556,10 +558,111 @@ line-heights: 1, 1.1
   justify-self: center;
   padding: 2.4rem 4.8rem 0 4.8rem;
   text-align: center;
-  gap: 2.4rem;
 }
 
 .form {
-  height: 2.4rem;
+  height: 4.8rem;
+  width: 35rem;
   justify-self: center;
+  border: 3px solid #212529;
+  border-radius: 3px 0 0 3px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  padding-left: 0.8rem;
+  letter-spacing: 1.2;
+  color: #212529c0;
+}
+
+.button-form {
+  height: 4.8rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.4rem;
+  border: none;
+  color: #ead6d6;
+  background-color: #212529;
+  padding: 0 2rem;
+  border-radius: 0 3px 3px 0;
+  transition: 0.3s;
+}
+
+.button-form:hover,
+.button-form:active {
+  cursor: pointer;
+  background-color: #343a40;
+  transition: 0.3s;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 3.2rem 2.4rem 3.2rem 0;
+  display: grid;
+  background-color: #ba181b;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+.footer-logo {
+  height: 17.5rem;
+}
+
+.footer-logos {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  justify-content: center;
+}
+
+.social-logo {
+  display: flex;
+  grid-row: 2;
+  grid-column: 1;
+  justify-content: center;
+  gap: 4.6rem;
+}
+
+.insta-logo,
+.facebook-logo {
+  fill: #000;
+  height: 6.4rem;
+  transition: 0.3s;
+}
+
+.insta-logo:hover,
+.insta-logo:active,
+.facebook-logo:hover,
+.facebook-logo:active {
+  cursor: pointer;
+  fill: #212529;
+  transition: 0.3s;
+}
+
+.footer-links {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+.footer-link {
+  font-size: 1.8rem;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  cursor: pointer;
+  color: #272c30;
+  transition: 0.3s;
+}
+
+.footer-link-title {
+  color: #212529;
+  font-size: 2.4rem;
 }
