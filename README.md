@@ -33,6 +33,7 @@ Made simple animations with transitions on the buttons, cards, gallery photos an
 - A carousel component in the testimonials section.
 - A modal window with carousel functionality in the gallery section
 - An accordion component in the FAQ section.
+- Scroll into view
 
 ## Styling left to implement
 
@@ -41,4 +42,3 @@ Only thing with CSS that is left to implement is the responsive design
 ## Functionalities left to implement
 
 - Sticky nav bar
-- Scroll into view

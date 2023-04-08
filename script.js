@@ -2,6 +2,8 @@
 
 // Selectors
 
+const navLink = document.querySelectorAll(".nav-link");
+const ctaButton = document.querySelector(".cta-button");
 const arrowLeft = document.querySelector(".left-arrow");
 const arrowRight = document.querySelector(".right-arrow");
 const testimonial = document.querySelectorAll(".testimonial-container");
@@ -14,10 +16,11 @@ const modalImages = document.querySelector(".images");
 const closeButton = document.querySelector(".close-modal");
 const modalArrowRight = document.querySelector(".modal-right-arrow");
 const modalArrowLeft = document.querySelector(".modal-left-arrow");
-const FAQContainer = document.querySelectorAll(".FAQ");
-const FAQContent = document.querySelectorAll(".FAQ-content");
+const FAQContainer = document.querySelectorAll(".faq");
+const FAQContent = document.querySelectorAll(".faq-content");
 const chevronIcon = document.querySelectorAll(".chevron-icon");
 const form = document.querySelector(".form");
+const sectionForm = document.querySelector(".section-form");
 
 // Global variables
 
@@ -177,10 +180,24 @@ FAQContainer.forEach((faq) =>
   })
 );
 
-// FORM section
+// SCROLL INTO VIEW
 
-// Event listeners
+// Functions
 
-form.addEventListener("click", function (e) {
-  form.value = "";
+const scrollInto = function (section) {
+  section.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
+navLink.forEach((nav) =>
+  nav.addEventListener("click", function (e) {
+    const sectionName = e.target.textContent.toLowerCase();
+    const section = document.querySelector(`.section-${sectionName}`);
+    scrollInto(section);
+  })
+);
+
+ctaButton.addEventListener("click", () => {
+  scrollInto(sectionForm);
 });
+
+// STICKY NAV

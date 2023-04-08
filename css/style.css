@@ -463,18 +463,18 @@ line-heights: 1, 1.1
 /* FAQs */
 /* ---- */
 
-.section-FAQ {
+.section-faq {
   display: grid;
   background-color: #ba181b;
   padding: 6.4rem 4.8rem;
 }
 
-.FAQ-title {
+.faq-title {
   font-size: 7.4rem;
   line-height: 1.1;
 }
 
-.FAQS-container {
+.faqS-container {
   list-style: none;
   display: grid;
   gap: 1.2rem;
@@ -484,7 +484,7 @@ line-heights: 1, 1.1
   transition: all 0.5s;
 }
 
-.FAQ {
+.faq {
   display: grid;
   font-size: 4.8rem;
   background-color: #ead6d6;
@@ -494,12 +494,12 @@ line-heights: 1, 1.1
   align-items: center;
 }
 
-.FAQ-head {
+.faq-head {
   border-radius: 3px;
 }
 
-.FAQ:hover,
-.FAQ:active {
+.faq:hover,
+.faq:active {
   cursor: pointer;
 }
 
@@ -510,7 +510,7 @@ line-heights: 1, 1.1
   transition: 0.7s;
 }
 
-.FAQ-content {
+.faq-content {
   font-weight: 400;
   margin-top: 2rem;
   grid-column: 1 / span 2;
@@ -523,7 +523,7 @@ line-heights: 1, 1.1
   letter-spacing: 1.1px;
 }
 
-.FAQ-content-container {
+.faq-content-container {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
