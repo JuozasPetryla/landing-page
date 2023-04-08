@@ -163,6 +163,7 @@ line-heights: 1, 1.1
   padding: 0 4.8rem 2.4rem 0;
   font-size: 2.4rem;
   line-height: 1.3;
+  font-weight: 400;
 }
 
 .about-icon {
@@ -212,6 +213,7 @@ line-heights: 1, 1.1
   font-size: 2.4rem;
   width: 80%;
   padding-top: 6.4rem;
+  font-weight: 400;
 }
 
 .testimonial-image {
@@ -432,6 +434,7 @@ line-heights: 1, 1.1
   align-items: center;
   font-size: 2rem;
   gap: 0.8rem;
+  font-weight: 400;
 }
 
 .plan-title {
@@ -507,6 +510,7 @@ line-heights: 1, 1.1
 }
 
 .FAQ-content {
+  font-weight: 400;
   margin-top: 2rem;
   grid-column: 1 / span 2;
   font-size: 3.2rem;
@@ -521,4 +525,41 @@ line-heights: 1, 1.1
   opacity: 0;
   overflow: hidden;
   transition: opacity 0.3s linear, max-height 0.7s ease-out;
+}
+
+/* FORM */
+/* ---- */
+
+.section-form {
+  padding: 6.4rem 4.8rem;
+  background-color: #ead6d6;
+}
+
+.form-container {
+  display: grid;
+  background-color: #b9181b;
+  padding: 6.4rem 4.8rem;
+  border-radius: 5px;
+}
+
+.form-title {
+  justify-self: center;
+  font-size: 7.4rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.form-text {
+  line-height: 1.3;
+  font-weight: 400;
+  font-size: 3.2rem;
+  justify-self: center;
+  padding: 2.4rem 4.8rem 0 4.8rem;
+  text-align: center;
+  gap: 2.4rem;
+}
+
+.form {
+  height: 2.4rem;
+  justify-self: center;
 }

@@ -56,3 +56,12 @@ p {
 .disable-hover {
   pointer-events: none !important;
 }
+
+.email {
+  text-decoration: underline;
+}
+
+.email:hover,
+.email:active {
+  cursor: pointer;
+}
