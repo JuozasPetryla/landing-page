@@ -37,8 +37,13 @@ line-heights: 1, 1.1
   padding: 0 4.8rem;
 }
 
-.image-logo {
+.image-logos {
   height: 10rem;
+}
+
+.image-logo:hover,
+.image-logo:active {
+  cursor: pointer;
 }
 
 .nav-links {

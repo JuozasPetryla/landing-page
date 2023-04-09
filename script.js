@@ -2,8 +2,10 @@
 
 // Selectors
 
+const logo = document.querySelector(".image-logo");
 const header = document.querySelector(".header");
 const navLink = document.querySelectorAll(".nav-link");
+const sectionHero = document.querySelector(".section-hero");
 const ctaButton = document.querySelector(".cta-button");
 const arrowLeft = document.querySelector(".left-arrow");
 const arrowRight = document.querySelector(".right-arrow");
@@ -111,7 +113,7 @@ const goToImage = function (img) {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
   let markup = `
-  <div class="image-container"><img class="image-gallery disable-hover" src="images/gallery-${img}.jpg" ></div>
+  <div class="image-container"><img class="image-gallery disable-hover" src="images/gallery-${img}.webp" ></div>
     
   `;
   modalImages.insertAdjacentHTML("beforeend", markup);
@@ -141,7 +143,7 @@ imageContainer.forEach((image) => {
     modal.classList.remove("hidden");
     overlay.classList.remove("hidden");
     let markup = `
-    <div class="image-container"><img class="image-gallery disable-hover" src="images/gallery-${img}.jpg" ></div>
+    <div class="image-container"><img class="image-gallery disable-hover" src="images/gallery-${img}.webp" ></div>
     
     `;
     modalImages.insertAdjacentHTML("beforeend", markup);
@@ -202,6 +204,10 @@ navLink.forEach((nav) =>
 
 ctaButton.addEventListener("click", () => {
   scrollInto(sectionForm);
+});
+
+logo.addEventListener("click", function (e) {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // STICKY NAV
