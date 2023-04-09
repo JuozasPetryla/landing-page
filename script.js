@@ -191,7 +191,10 @@ FAQContainer.forEach((faq) =>
 
 const scrollInto = function (section) {
   window.scrollTo({
-    top: section.getBoundingClientRect().top + window.scrollY - 101,
+    top:
+      section.getBoundingClientRect().top +
+      window.scrollY -
+      header.getBoundingClientRect().height,
     behavior: "smooth",
   });
 };
@@ -213,29 +216,42 @@ logo.addEventListener("click", function (e) {
 });
 
 // STICKY NAV
-console.log(window.scrollY);
+const navHeight = header.getBoundingClientRect().height;
 
-const addSticky = function () {
-  if (window.scrollY >= 634) {
-    header.classList.add("sticky");
-    document.querySelector(".section-hero").classList.add("nav-bar-offset");
-  }
-  if (window.scrollY < 100) {
-    header.classList.remove("sticky");
-    document.querySelector(".section-hero").classList.remove("nav-bar-offset");
-  }
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) header.classList.add("sticky");
+  else header.classList.remove("sticky");
 };
-
-window.addEventListener("scroll", addSticky);
 
 // MOBILE NAV
 // Adds a hidden class to mobile nav
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `${navHeight}px`,
+});
+headerObserver.observe(header);
+
+const allSections = document.querySelectorAll(".section");
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+// Matching the media query in JS
 const matchMobile = function (mobileNavEvent) {
   if (mobileNavEvent.matches) {
     nav.classList.add("nav-closed");
   }
 };
-// Matching the media query in JS
 const mobileNavEvent = window.matchMedia("(max-width: 49em)");
 matchMobile(mobileNavEvent);
 

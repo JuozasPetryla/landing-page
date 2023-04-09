@@ -69,12 +69,10 @@ line-heights: 1, 1.1
   transition: 0.3s;
 }
 
-.mobile-nav {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+.mobile-nav-open {
+  height: 4.8rem;
+  display: none;
 }
-
 /* HERO */
 /*------- */
 
@@ -424,7 +422,6 @@ line-heights: 1, 1.1
   max-width: 35rem;
   box-shadow: 1.5px 1px 5px 2px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
-  position: relative;
 }
 
 .plan:hover,

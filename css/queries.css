@@ -45,7 +45,7 @@
     font-size: 3rem;
   }
   .plan {
-    max-width: 25rem;
+    width: 25rem;
   }
   .plan-price {
     font-size: 4.8rem;
@@ -104,7 +104,7 @@
     font-size: 2.4rem;
   }
   .plan {
-    max-width: 22.5rem;
+    width: 22.5rem;
   }
   .plan-price {
     font-size: 3.6rem;
@@ -116,13 +116,8 @@
 
 /* 790 px Smaller tablets */
 @media (max-width: 49em) {
-  .images-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
   .header {
-    display: block;
+    display: flex;
   }
   .mobile-nav-open {
     height: 4.8rem;
@@ -147,10 +142,10 @@
     gap: 6.4rem;
     align-items: center;
     justify-content: center;
-    transition: all 1s ease-in;
+    transition: all 0.7s ease-in;
   }
   .section-hero {
-    height: 50rem;
+    max-height: 50rem;
   }
   .hero-text {
     font-size: 4.8rem;
@@ -245,5 +240,210 @@
   }
   .footer-link {
     font-size: 1.2rem;
+  }
+}
+
+/* Mobile large */
+
+@media (max-width: 39em) {
+  .section-hero {
+    height: 45rem;
+  }
+  .hero-text-container {
+    height: 20rem;
+    width: 30rem;
+  }
+  .hero-text {
+    font-size: 3.2rem;
+  }
+  .cta-button {
+    transform: translate(0, 425%);
+    width: 27.5rem;
+    font-size: 2.4rem;
+  }
+  .section-about {
+    grid-template-rows: 1fr 5fr;
+    gap: 0;
+  }
+  .about-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .about-icon {
+    height: 4.8rem;
+    padding-bottom: 2rem;
+  }
+  .about-list-items {
+    grid-template-rows: 0.5fr 0.5fr 2fr;
+  }
+  .plans-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2.4rem;
+  }
+  .plan {
+    justify-self: center;
+    width: 35rem;
+  }
+  .plan-title {
+    font-size: 4.8rem;
+  }
+  .faq-content {
+    font-size: 1.6rem;
+  }
+  .form-container-all {
+    padding: 2.4rem 0;
+  }
+  .section-testimonials {
+    max-height: 45rem;
+  }
+  .testimonial-container p {
+    font-size: 1.6rem;
+  }
+  .testimonial-container {
+    height: 20rem;
+    padding-bottom: 0;
+  }
+  .testimonial-image {
+    height: 4.2rem;
+  }
+  .dots {
+    top: 57.5%;
+    right: 45%;
+  }
+  .left-arrow,
+  .right-arrow {
+    height: 3.2rem;
+    top: 35%;
+  }
+  .faq {
+    font-size: 2.4rem;
+  }
+  .faq-content {
+    font-size: 1.4rem;
+  }
+  .chevron-icon {
+    height: 4rem;
+  }
+  .form-title {
+    font-size: 2.6rem;
+  }
+  .form {
+    max-width: 25rem;
+    font-size: 2rem;
+  }
+  .form-text {
+    font-size: 1.2rem;
+  }
+  .footer {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .footer-links {
+    justify-self: center;
+  }
+  .footer-links:last-child {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+  }
+  .footer-links:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+}
+
+/* Normal phone */
+
+@media (max-width: 30em) {
+  .section-hero {
+    height: 42.5rem;
+  }
+  .header {
+    height: 7rem;
+    padding: 1.2rem;
+  }
+  .form-container-all {
+    gap: 0;
+  }
+  .form-text {
+    padding: 1.2rem;
+  }
+  .form {
+    height: 3.5rem;
+    font-size: 1.2rem;
+    width: 17.5rem;
+  }
+  .form-title {
+    font-size: 2rem;
+  }
+  .button-form {
+    height: 3.5rem;
+    font-size: 1.2rem;
+  }
+  .about-title,
+  .testimonials-title,
+  .gallery-title,
+  .plans-title,
+  .faq-title {
+    font-size: 3.2rem;
+  }
+  .testimonial-container p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 26em) {
+  .section-hero {
+    height: 35rem;
+  }
+  .hero-text-container {
+    height: 20rem;
+    width: 22.5rem;
+  }
+  .hero-text {
+    font-size: 3rem;
+  }
+  .cta-button {
+    transform: translate(0, 525%);
+    font-size: 1.8rem;
+    height: 5rem;
+    width: 22.5rem;
+  }
+  .section-about {
+    grid-template-rows: 1fr 7fr;
+  }
+  .plan {
+    width: 27.5rem;
+  }
+  .plan-title {
+    font-size: 3.2rem;
+  }
+  .form {
+    width: 15rem;
+  }
+  .form-title {
+    font-size: 1.8rem;
+  }
+  .form-text {
+    font-size: 1rem;
+  }
+  .about-title,
+  .testimonials-title,
+  .gallery-title,
+  .plans-title,
+  .faq-title {
+    font-size: 3rem;
+  }
+  .testimonial-container {
+    height: 17.5rem;
+  }
+  .left-arrow,
+  .right-arrow {
+    top: 30%;
+  }
+  .dots {
+    top: 51.5%;
+    right: 40%;
   }
 }
