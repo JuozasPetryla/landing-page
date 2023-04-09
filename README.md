@@ -2,7 +2,7 @@
 
 ## A simple fictional powerlifting gym landing page made with vanilla JS, CSS and HTML.
 
-This is just a practice project to get a better understanding of vanilla JavaScript interactions with the DOM and basic CSS styling. Everything was built completely from scratch.
+This is just a practice project to get a better understanding of vanilla JavaScript interactions with the DOM and basic CSS styling. Everything was built completely from scratch. Netlify link - https://powertower.netlify.app/
 
 ## Landing page sections
 
