@@ -1,0 +1,216 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/* 1220px - Smaller laptops */
+@media (max-width: 76em) {
+  .cta-button {
+    font-size: 3.4rem;
+    max-width: 40rem;
+  }
+  .hero-text-container {
+    width: 70rem;
+    height: 37.5rem;
+  }
+  .hero-text {
+    font-size: 7.4rem;
+  }
+  .about-list-items h4 {
+    font-size: 4rem;
+  }
+  .about-list-items p {
+    padding: 2.4rem 2.4rem 2.4rem 0;
+  }
+  .about-list-items {
+    grid-template-rows: 1fr 1fr 3fr;
+  }
+  .plans-container {
+    padding-left: 0;
+  }
+  .faqS-container {
+    padding: 0;
+  }
+}
+
+/* 1070px - Laptops- larger tablets */
+@media (max-width: 67em) {
+  .section-about {
+    padding: 6.4rem 0 6.4rem 4.8rem;
+  }
+  .about-list-items h4 {
+    font-size: 3.2rem;
+  }
+  .about-list-items p {
+    padding: 1.2rem 2.4rem 2.4rem 0;
+  }
+  .form-text {
+    font-size: 3rem;
+  }
+  .plan {
+    max-width: 25rem;
+  }
+  .plan-price {
+    font-size: 4.8rem;
+  }
+}
+
+/* 890px - Tablets */
+@media (max-width: 56em) {
+  .hero-text {
+    font-size: 6.4rem;
+  }
+  .hero-text-container {
+    width: 65rem;
+    height: 32.5rem;
+  }
+  .section-hero {
+    height: 60rem;
+  }
+  .cta-button {
+    transform: translate(0, 450%);
+  }
+  .section-about {
+    gap: 0;
+    grid-template-rows: 1fr 5fr;
+  }
+  .about-title,
+  .testimonials-title,
+  .gallery-title,
+  .plans-title,
+  .faq-title,
+  .form-title {
+    font-size: 5.6rem;
+  }
+  .about-list {
+    gap: 2rem;
+  }
+  .about-list-items h4,
+  .faq {
+    font-size: 3.2rem;
+  }
+  .about-list-items p,
+  .testimonials-container p {
+    font-size: 2.2rem;
+  }
+
+  .faq {
+    padding: 1.2rem;
+  }
+  .faq-content {
+    font-size: 2rem;
+  }
+  .form-text {
+    font-size: 2.4rem;
+  }
+  .plan-title {
+    font-size: 2.4rem;
+  }
+  .plan {
+    max-width: 22.5rem;
+  }
+  .plan-price {
+    font-size: 3.6rem;
+  }
+  .plans-container {
+    gap: 1rem;
+  }
+}
+
+/* 790 px Smaller tablets */
+@media (max-width: 49em) {
+  .section-hero {
+    height: 50rem;
+  }
+  .hero-text {
+    font-size: 4.8rem;
+    padding-left: 1.2rem;
+  }
+  .hero-text-container {
+    width: 42.5rem;
+    height: 25rem;
+  }
+  .cta-button {
+    width: 35rem;
+    justify-content: right;
+    height: 7.5rem;
+    font-size: 3rem;
+    padding: 0 1.2rem 0 2.4rem;
+    transform: translate(0, 500%);
+  }
+  .section-about {
+    gap: 1.2rem;
+  }
+  .section-about,
+  .section-testimonials,
+  .section-gallery,
+  .section-plans,
+  .section-faq,
+  .section-form {
+    padding: 3.2rem 3.2rem;
+  }
+  .about-title,
+  .testimonials-title,
+  .gallery-title,
+  .plans-title,
+  .faq-title {
+    font-size: 4.8rem;
+  }
+  .about-icon {
+    height: 3.2rem;
+  }
+  .about-list {
+    gap: 0.2rem;
+  }
+  .about-list-items h4 {
+    font-size: 2.4rem;
+  }
+  .about-list-items {
+    grid-template-rows: 1fr 1fr 3fr;
+  }
+  .about-list-items p {
+    font-size: 1.8rem;
+  }
+  .testimonial-container {
+    height: 30rem;
+    max-width: 80rem;
+  }
+  .testimonial-image {
+    height: 6.4rem;
+  }
+  .dots {
+    top: 80%;
+  }
+  .left-arrow,
+  .right-arrow {
+    top: 40%;
+  }
+  .form-container-all {
+    gap: 1rem;
+    padding: 3.2rem 1.8rem;
+  }
+  .form-title {
+    font-size: 4rem;
+  }
+  .form-text {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .footer {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    padding: 1.2rem 1.2rem 1.2rem 0;
+  }
+  .footer-logo {
+    height: 12.5rem;
+  }
+  .insta-logo,
+  .facebook-logo {
+    height: 3.2rem;
+  }
+  .footer-links {
+    padding-top: 3.2rem;
+  }
+  .footer-link-title {
+    font-size: 1.6rem;
+  }
+  .footer-link {
+    font-size: 1.2rem;
+  }
+}

@@ -31,6 +31,7 @@ line-heights: 1, 1.1
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,6 +39,7 @@ body {
   line-height: 1;
   font-weight: 600;
   color: #212529;
+  overflow-x: hidden;
 }
 
 p {

@@ -73,7 +73,7 @@ line-heights: 1, 1.1
 /*------- */
 
 .section-hero {
-  height: 100vh;
+  height: 70rem;
   position: relative;
   background-image: linear-gradient(
       rgba(39, 39, 39, 0.6),
