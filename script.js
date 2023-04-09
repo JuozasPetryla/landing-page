@@ -230,7 +230,7 @@ const stickyNav = function (entries) {
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `${navHeight}px`,
+  rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
 
@@ -250,8 +250,14 @@ const sectionObserver = new IntersectionObserver(revealSection, {
 const matchMobile = function (mobileNavEvent) {
   if (mobileNavEvent.matches) {
     nav.classList.add("nav-closed");
+    nav.classList.add("mobile");
+  }
+  if (!mobileNavEvent.matches) {
+    nav.classList.remove("nav-closed");
+    nav.classList.remove("mobile");
   }
 };
+
 const mobileNavEvent = window.matchMedia("(max-width: 49em)");
 matchMobile(mobileNavEvent);
 
@@ -262,6 +268,7 @@ const openNav = function () {
 };
 
 const closeNav = function () {
+  if (!nav.classList.contains("mobile")) return;
   nav.classList.add("nav-closed");
   nav.classList.remove("nav-open");
   nav.style.transform = "translateX(100%)";

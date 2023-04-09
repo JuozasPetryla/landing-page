@@ -6,6 +6,10 @@
     font-size: 3.4rem;
     max-width: 40rem;
   }
+  .cta-button:hover,
+  .cta-button:active {
+    width: 45rem;
+  }
   .hero-text-container {
     width: 70rem;
     height: 37.5rem;
@@ -163,6 +167,10 @@
     padding: 0 1.2rem 0 2.4rem;
     transform: translate(0, 500%);
   }
+  .cta-button:hover,
+  .cta-button:active {
+    width: 40rem;
+  }
   .section-about {
     gap: 1.2rem;
   }
@@ -261,6 +269,10 @@
     width: 27.5rem;
     font-size: 2.4rem;
   }
+  .cta-button:hover,
+  .cta-button:active {
+    width: 32.5rem;
+  }
   .section-about {
     grid-template-rows: 1fr 5fr;
     gap: 0;
@@ -357,7 +369,11 @@
 
 @media (max-width: 30em) {
   .section-hero {
+    margin-top: 7rem;
     height: 42.5rem;
+  }
+  .image-logos {
+    height: 6.9rem;
   }
   .header {
     height: 7rem;
@@ -410,6 +426,10 @@
     height: 5rem;
     width: 22.5rem;
   }
+  .cta-button:hover,
+  .cta-button:active {
+    width: 27.5rem;
+  }
   .section-about {
     grid-template-rows: 1fr 7fr;
   }
@@ -445,5 +465,8 @@
   .dots {
     top: 51.5%;
     right: 40%;
+  }
+  .faq {
+    font-size: 2rem;
   }
 }

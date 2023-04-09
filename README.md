@@ -35,11 +35,8 @@ Made simple animations with transitions on the buttons, cards, gallery photos an
 - An accordion component in the FAQ section.
 - Scroll into view
 - Sticky nav bar
+- The page is fully responsive
 
-## Styling left to implement
+## Problems I could not fix
 
-Only thing with CSS that is left to implement is the responsive design
-
-
-
-
+The pages `.nav-closed` and `.mobile` classes which are only supposed to be added on a certain media-query are only added after the page is reloaded.
