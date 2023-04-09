@@ -69,6 +69,12 @@ line-heights: 1, 1.1
   transition: 0.3s;
 }
 
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 /* HERO */
 /*------- */
 

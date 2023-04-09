@@ -24,6 +24,8 @@ const FAQContent = document.querySelectorAll(".faq-content");
 const chevronIcon = document.querySelectorAll(".chevron-icon");
 const form = document.querySelector(".form");
 const sectionForm = document.querySelector(".section-form");
+const mobileNavButton = document.querySelector(".mobile-nav-open");
+const nav = document.querySelector(".nav-links");
 
 // Global variables
 
@@ -225,3 +227,29 @@ const addSticky = function () {
 };
 
 window.addEventListener("scroll", addSticky);
+
+// MOBILE NAV
+// Adds a hidden class to mobile nav
+const matchMobile = function (mobileNavEvent) {
+  if (mobileNavEvent.matches) {
+    nav.classList.add("nav-closed");
+  }
+};
+// Matching the media query in JS
+const mobileNavEvent = window.matchMedia("(max-width: 49em)");
+matchMobile(mobileNavEvent);
+
+const openNav = function () {
+  nav.classList.remove("nav-closed");
+  nav.classList.add("nav-open");
+  nav.style.transform = "translateX(0)";
+};
+
+const closeNav = function () {
+  nav.classList.add("nav-closed");
+  nav.classList.remove("nav-open");
+  nav.style.transform = "translateX(100%)";
+};
+
+mobileNavButton.addEventListener("click", openNav);
+nav.addEventListener("click", closeNav);

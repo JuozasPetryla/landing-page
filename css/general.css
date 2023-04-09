@@ -86,3 +86,17 @@ p {
 .nav-bar-offset {
   margin-top: 101.2px;
 }
+
+.nav-closed {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 0;
+}
+
+.nav-open {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  z-index: 999;
+}
