@@ -265,13 +265,13 @@
       </section>
 
       <section class="section section-form">
-        <form class="form-container-all">
+        <div class="form-container-all">
           <h2 class="form-title">Start your journey to POWER now!</h2>
           <p class="form-text">Submit your email now and get a free week at Power Tower. <br>By submiting the form, you agree to subscribing to our newsletter. <br>If you want to cancel the subscribtion, please contact us at<br> <span class="email" href="#">PowerTower@fakemail.com</span>.</p>
-          <div class="form-container">
+          <form class="form-container" name="contact" method="POST" data-netlify="true">
             <input class="form" type="text" id="email" placeholder="Your email goes here"></input>
-            <button class="button-form">Start lifting</button>  
-          </div>
+            <button class="button-form" type="submit">Start lifting</button>  
+          </form>
         </div>
       </section>
     </main>
