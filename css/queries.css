@@ -39,6 +39,19 @@
   .section-about {
     padding: 6.4rem 0 6.4rem 4.8rem;
   }
+  .hero-text-container {
+    width: 67.5rem;
+    height: 35rem;
+  }
+  .hero-text {
+    padding: 2.2rem;
+    font-size: 7.2rem;
+  }
+  .cta-button {
+    width: 35rem;
+    font-size: 3rem;
+    padding: 0 0 0 3rem;
+  }
   .about-list-items h4 {
     font-size: 3.2rem;
   }
@@ -251,7 +264,7 @@
   }
 }
 
-/* Mobile large */
+/* 624px Mobile large */
 
 @media (max-width: 39em) {
   .section-hero {
@@ -363,15 +376,19 @@
   .footer-links:nth-child(4) {
     grid-column: 2 / span 2;
   }
+  .gallery-container {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-/* Normal phone */
+/* 480px Normal phone */
 
 @media (max-width: 30em) {
   .section-hero {
-    margin-top: 7rem;
     height: 42.5rem;
   }
+
   .image-logos {
     height: 6.9rem;
   }
@@ -409,22 +426,25 @@
   }
 }
 
+/* Smaller phone 416px */
 @media (max-width: 26em) {
   .section-hero {
     height: 35rem;
   }
   .hero-text-container {
-    height: 20rem;
-    width: 22.5rem;
+    height: 17.5rem;
+    width: 21rem;
+    transform: translate(0, 50%);
   }
   .hero-text {
-    font-size: 3rem;
+    padding: 1.2rem 2.4rem;
+    font-size: 2.8rem;
   }
   .cta-button {
     transform: translate(0, 525%);
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     height: 5rem;
-    width: 22.5rem;
+    width: 17.5rem;
   }
   .cta-button:hover,
   .cta-button:active {

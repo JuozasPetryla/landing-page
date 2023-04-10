@@ -216,12 +216,11 @@ logo.addEventListener("click", function (e) {
 });
 
 // STICKY NAV
-const navHeight = header.getBoundingClientRect().height;
+let navHeight = header.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) header.classList.add("sticky");
-  else header.classList.remove("sticky");
 };
 
 // MOBILE NAV
@@ -234,17 +233,18 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(header);
 
-const allSections = document.querySelectorAll(".section");
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  observer.unobserve(entry.target);
-};
+// FOR LAZY IMAGE LOADING
+// const allSections = document.querySelectorAll(".section");
+// const revealSection = function (entries, observer) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) return;
+//   observer.unobserve(entry.target);
+// };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15,
-});
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//   root: null,
+//   threshold: 0.15,
+// });
 
 // Matching the media query in JS
 const matchMobile = function (mobileNavEvent) {
