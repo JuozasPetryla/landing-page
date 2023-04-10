@@ -37,6 +37,4 @@ Made simple animations with transitions on the buttons, cards, gallery photos an
 - Sticky nav bar
 - The page is fully responsive
 
-## Problems I could not fix
 
-The pages `.nav-closed` and `.mobile` classes which are only supposed to be added on a certain media-query are only added after the page is reloaded.
